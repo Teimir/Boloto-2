@@ -131,7 +131,7 @@ def user_tl(request, username, partial=False):
 @login_required
 def homepage(request):
     response1 = home_tl(request, partial=True)
-    response2 = user_tl(request, "minitrope", partial=True)
+    response2 = user_tl(request, "admin", partial=True) #Захардкожено имя пользоваетеля
     return render(request, "trompette/homepage.html", {
         "timeline1": response1.content,
         "timeline2": response2.content
